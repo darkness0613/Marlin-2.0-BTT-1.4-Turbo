@@ -605,6 +605,7 @@
 //#define CODEPENDENT_XY_HOMING
 
 #if ENABLED(BLTOUCH)
+
   /**
    * Either: Use the defaults (recommended) or: For special purposes, use the following DEFINES
    * Do not activate settings that the probe might not understand. Clones might misunderstand
@@ -631,7 +632,7 @@
   // Feature: Switch into SW mode after a deploy. It makes the output pulse longer. Can be useful
   //          in special cases, like noisy or filtered input configurations.
   #define BLTOUCH_FORCE_SW_MODE
-  #define USE_PROBE_FOR_Z_HOMING true
+  
   /**
    * Settings for BLTouch Smart 3.0 and 3.1
    * Summary:
@@ -2328,7 +2329,7 @@
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  142
+    #define X_STALL_SENSITIVITY  150
     #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
     #define Y_STALL_SENSITIVITY  130
     //#define Z_STALL_SENSITIVITY  8
